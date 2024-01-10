@@ -40,8 +40,8 @@ spec:
       - from: ServiceURL
         to: SERVICE_URL
       - from: ConsumerKey
-        to: CONSUMER_KEY
+        to: CLIENT_ID
       - from: ConsumerSecret
-        to: CONSUMER_SECRET
+        to: CLIENT_SECRET
       - from: TokenURL
         to: TOKEN_URL
