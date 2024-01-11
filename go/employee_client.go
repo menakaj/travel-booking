@@ -20,9 +20,13 @@ func getEmployee(empId int32) (*Employee, error) {
 	getEmp, _ := http.NewRequest("GET", requestUrl, nil)
 	getEmp.Header.Add("Authorization", "Bearer "+accessToken)
 
-	empResp, _ := http.DefaultClient.Do(getEmp)
+	empResp, e := http.DefaultClient.Do(getEmp)
 
-	if empResp.StatusCode == http.StatusNotFound {
+	if e != nil {
+		return nil, fmt.Errorf("error while getting employee details")
+	}
+
+	if empResp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("employee not found")
 	}
 
