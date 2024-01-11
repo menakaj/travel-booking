@@ -34,8 +34,8 @@ spec:
   outbound:
     # +optional Defines the service references from the internal API marketplace.
     serviceReferences:
-    - name: choreo:///apifirst/mttm/ygzqwk/ad088/v1.0/PUBLIC
-      connectionConfig: 01eeb04c-14ea-1cfe-8b3f-9cc8a9967d19
+    - name: choreo:///apifirst/mttm/mmvhxd/ad088/v1.0/PUBLIC
+      connectionConfig: 01eeb070-57be-19ee-bbc5-cc661b49c469
       env:
       - from: ServiceURL
         to: SERVICE_URL
