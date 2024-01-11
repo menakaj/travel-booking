@@ -16,21 +16,17 @@ type TokenResponse struct {
 	ExpiresIn   int    `json:"expires_in"`
 }
 
-func GetToken() string {
+func GetToken() (string, error) {
 	clientId := os.Getenv("CLIENT_ID")
 	clientSecret := os.Getenv("CLIENT_SECRET")
 	tokenUrl := os.Getenv("TOKEN_URL")
-
-	fmt.Println(clientId)
-	fmt.Println(clientSecret)
-	fmt.Println(tokenUrl)
 
 	header := "Basic " + base64.StdEncoding.EncodeToString([]byte(clientId+":"+clientSecret))
 	r, e := http.NewRequest("POST", tokenUrl, bytes.NewReader([]byte("grant_type=client_credentials")))
 
 	if e != nil {
 		fmt.Println(e)
-		return ""
+		return "", e
 	}
 	r.Header.Add("Authorization", header)
 	r.Header.Add("Content-Type", "application/x-www-form-urlencoded")
@@ -39,7 +35,7 @@ func GetToken() string {
 
 	if err != nil {
 		fmt.Println(err)
-		return ""
+		return "", e
 	}
 
 	accessToken := &TokenResponse{}
@@ -48,10 +44,10 @@ func GetToken() string {
 
 	if err != nil {
 		fmt.Println(err)
-		return ""
+		return "", e
 	}
 
 	json.Unmarshal(body, accessToken)
 
-	return accessToken.AccessToken
+	return accessToken.AccessToken, nil
 }

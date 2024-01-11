@@ -9,8 +9,7 @@
 package swagger
 
 type BookingRequest struct {
-
-	EmpId int32 `json:"empId,omitempty"`
+	EmpId int32 `json:"empId"`
 
 	From string `json:"from,omitempty"`
 

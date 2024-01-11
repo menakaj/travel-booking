@@ -13,7 +13,6 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"os"
 )
 
 var bookings = make([]Booking, 0, 10)
@@ -26,38 +25,19 @@ type Employee struct {
 
 func CreateBooking(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-
-	clientId := os.Getenv("CLIENT_ID")
-	clientSecret := os.Getenv("CLIENT_SECRET")
-	tokenUrl := os.Getenv("TOKEN_URL")
-
-	fmt.Println(clientId)
-	fmt.Println(clientSecret)
-	fmt.Println(tokenUrl)
-	accessToken := GetToken()
-
-	fmt.Println(accessToken)
-
 	request := BookingRequest{}
 
 	req, _ := io.ReadAll(r.Body)
 
 	json.Unmarshal(req, &request)
 
-	requestUrl := fmt.Sprintf("%s/employees/%d", os.Getenv("SERVICE_URL"), request.EmpId)
+	emp, empErr := getEmployee(request.EmpId)
 
-	getEmp, _ := http.NewRequest("GET", requestUrl, nil)
-	getEmp.Header.Add("Authorization", "Bearer "+accessToken)
-
-	empResp, _ := http.DefaultClient.Do(getEmp)
-
-	emp := Employee{}
-
-	body, _ := io.ReadAll(empResp.Body)
-
-	fmt.Println(string(body))
-
-	json.Unmarshal(body, &emp)
+	if empErr != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		w.Write([]byte("Error while getting employee details"))
+		return
+	}
 
 	booking := Booking{
 		Id:          fmt.Sprint(len(bookings) + 1),
