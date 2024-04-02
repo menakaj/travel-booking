@@ -31,3 +31,17 @@ spec:
       # This is only applicable to REST endpoint types.
       # The path should be relative to the docker context.
       schemaFilePath: openapi.json
+  outbound:
+    serviceReferences:
+    - name: choreo:///apifirst/zgjc/vfqlzu/ad088/v1.0/PUBLIC
+      connectionConfig: 01eef0f5-e682-10b0-b261-9596aedc0406
+      env:
+    - from: ServiceURL
+      to: SERVICE_URL
+    - from: ConsumerKey
+      to: CLIENT_ID
+    - from: ConsumerSecret
+      to: CLIENT_SECRET
+    - from: TokenURL
+      to: TOKEN_URL
+
