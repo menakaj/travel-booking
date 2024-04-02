@@ -19,12 +19,12 @@ spec:
     serviceReferences:
       - name: choreo:///apifirst/zgjc/vfqlzu/ad088/v1.0/PUBLIC
         connectionConfig: 01eef0f5-e682-10b0-b261-9596aedc0406
-        env: null
-      - from: ServiceURL
-        to: SERVICE_URL
-      - from: ConsumerKey
-        to: CLIENT_ID
-      - from: ConsumerSecret
-        to: CLIENT_SECRET
-      - from: TokenURL
-        to: TOKEN_URL
+        env:
+        - from: ServiceURL
+          to: SERVICE_URL
+        - from: ConsumerKey
+          to: CLIENT_ID
+        - from: ConsumerSecret
+          to: CLIENT_SECRET
+        - from: TokenURL
+          to: TOKEN_URL
