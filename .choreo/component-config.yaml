@@ -18,7 +18,7 @@ spec:
   outbound:
     serviceReferences:
       - name: choreo:///apifirst/zgjc/vfqlzu/ad088/v1.0/PUBLIC
-        connectionConfig: 01eef0f5-e682-10b0-b261-9596aedc0406
+        connectionConfig: 01eef0ff-47fa-1a78-9a51-5ee679e4f928
         env:
         - from: ServiceURL
           to: SERVICE_URL
