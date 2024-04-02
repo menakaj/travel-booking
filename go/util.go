@@ -20,7 +20,7 @@ func GetToken() (string, error) {
 	clientId := os.Getenv("CLIENT_ID")
 	clientSecret := os.Getenv("CLIENT_SECRET")
 	tokenUrl := os.Getenv("TOKEN_URL")
-
+	fmt.Println(clientId, clientSecret, tokenUrl)
 	header := "Basic " + base64.StdEncoding.EncodeToString([]byte(clientId+":"+clientSecret))
 	r, e := http.NewRequest("POST", tokenUrl, bytes.NewReader([]byte("grant_type=client_credentials")))
 
