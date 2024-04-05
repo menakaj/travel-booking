@@ -18,7 +18,7 @@ spec:
   outbound:
     serviceReferences:
       - name: choreo:///menaka/guub/wnhbsz/ad088/v1.0/PUBLIC
-        connectionConfig: 01eef1ae-f90c-14b6-9b87-c6d77786f22c
+        connectionConfig: 01eeb070-57be-19ee-bbc5-cc661b49c469
         env:
         - from: ServiceURL
           to: SERVICE_URL
