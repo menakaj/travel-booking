@@ -1,7 +1,7 @@
 apiVersion: core.choreo.dev/v1alpha1
 kind: ComponentConfig
 metadata:
-  name: Travel booking
+  name: Travel Booking
   projectName: Travel
   annotations:
     componentType: Service
@@ -9,7 +9,7 @@ spec:
   build:
     branch: main
   inbound:
-    - name: Travel Booking API
+    - name: EmployeeTravelBookingAPI
       port: 8081
       type: REST
       visibility: Public
