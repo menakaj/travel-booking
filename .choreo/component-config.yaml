@@ -12,19 +12,6 @@ spec:
     - name: EmployeeTravelBookingAPI
       port: 8081
       type: REST
-      visibility: Public
+      visibility: Organizatioj
       context: /travelmgt/v1
       schemaFilePath: openapi.json
-  outbound:
-    serviceReferences:
-      - name: choreo:///menaka/guub/wnhbsz/ad088/v1.0/PUBLIC
-        connectionConfig: 01eeb070-57be-19ee-bbc5-cc661b49c469
-        env:
-        - from: ServiceURL
-          to: SERVICE_URL
-        - from: ConsumerKey
-          to: CLIENT_ID
-        - from: ConsumerSecret
-          to: CLIENT_SECRET
-        - from: TokenURL
-          to: TOKEN_URL
