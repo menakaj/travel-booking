@@ -12,6 +12,6 @@ spec:
     - name: EmployeeTravelBookingAPI
       port: 8081
       type: REST
-      visibility: Organizatioj
+      visibility: Organization
       context: /travelmgt/v1
       schemaFilePath: openapi.json
