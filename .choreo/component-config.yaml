@@ -17,14 +17,9 @@ spec:
       schemaFilePath: openapi.json
   outbound:
     serviceReferences:
-      - name: choreo:///menaka/guub/wnhbsz/ad088/v1.0/PUBLIC
-        connectionConfig: 01eeb070-57be-19ee-bbc5-cc661b49c469
+      - name: choreo:///apifirst/testprojectconnections/efzvlb/ad088/v1/PUBLIC
+        connectionConfig: 01eefdfc-0571-1e46-b87c-e2b9424ef2b7
         env:
         - from: ServiceURL
           to: SERVICE_URL
-        - from: ConsumerKey
-          to: CLIENT_ID
-        - from: ConsumerSecret
-          to: CLIENT_SECRET
-        - from: TokenURL
-          to: TOKEN_URL
+
