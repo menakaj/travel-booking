@@ -17,7 +17,7 @@ spec:
       schemaFilePath: openapi.json
   outbound:
     serviceReferences:
-    - name: choreo:///apifirst/releaseresting/jmteek/ad088/v1/PUBLIC
+    - name: choreo:///apifirst/test513/uxfuat/ad088/v1/PUBLIC
       connectionConfig: 01ef110d-0fda-1818-b100-a303c2b200c0
       env:
       - from: ServiceURL
