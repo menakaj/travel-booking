@@ -18,7 +18,7 @@ spec:
   outbound:
     serviceReferences:
     - name: choreo:///apifirst/releaseresting/jmteek/ad088/v1/PUBLIC
-      connectionConfig: 01ef0b94-b024-129e-8a92-88215d144ca3
+      connectionConfig: 01ef110d-0fda-1818-b100-a303c2b200c0
       env:
       - from: ServiceURL
         to: SERVICE_URL
