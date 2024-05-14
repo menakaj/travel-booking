@@ -17,14 +17,14 @@ spec:
       schemaFilePath: openapi.json
   outbound:
     serviceReferences:
-      - name: choreo:///apifirst/test514/ufgatw/ad088/v1/PUBLIC
-        connectionConfig: 01ef11dc-a6c2-13f0-b2f5-fbfcbcf89088
-        env:
-          - from: ServiceURL
-            to: <YOUR_ENV_VARIABLE_NAME_HERE>
-          - from: ConsumerKey
-            to: <YOUR_ENV_VARIABLE_NAME_HERE>
-          - from: ConsumerSecret
-            to: <YOUR_ENV_VARIABLE_NAME_HERE>
-          - from: TokenURL
-            to: <YOUR_ENV_VARIABLE_NAME_HERE>
+    - name: choreo:///apifirst/test514/ufgatw/ad088/v1/PUBLIC
+      connectionConfig: 01ef11dc-a6c2-13f0-b2f5-fbfcbcf89088
+      env:
+      - from: ServiceURL
+        to: <YOUR_ENV_VARIABLE_NAME_HERE>
+      - from: ConsumerKey
+        to: <YOUR_ENV_VARIABLE_NAME_HERE>
+      - from: ConsumerSecret
+        to: <YOUR_ENV_VARIABLE_NAME_HERE>
+      - from: TokenURL
+        to: <YOUR_ENV_VARIABLE_NAME_HERE>
