@@ -12,21 +12,19 @@ spec:
     - name: EmployeeTravelBookingAPI
       port: 8081
       type: REST
-      visibility: Public
+      networkVisibility: Public
       context: /travelmgt/v1
       schemaFilePath: openapi.json
   outbound:
     serviceReferences:
-    - name: choreo:///apifirst/test514/ufgatw/ad088/v1/PUBLIC
-      connectionConfig: 01ef11d5-96f3-12ce-a26b-c24d3efc5df5
-      env:
-      - from: ServiceURL
-        to: <YOUR_ENV_VARIABLE_NAME_HERE>
-      - from: ConsumerKey
-        to: <YOUR_ENV_VARIABLE_NAME_HERE>
-      - from: ConsumerSecret
-        to: <YOUR_ENV_VARIABLE_NAME_HERE>
-      - from: TokenURL
-        to: <YOUR_ENV_VARIABLE_NAME_HERE>
-
-
+      - name: 'choreo:///apifirst/test514/ufgatw/ad088/v1/PUBLIC'
+        connectionConfig: 01ef11d5-96f3-12ce-a26b-c24d3efc5df5
+        env:
+          - from: ServiceURL
+            to: <YOUR_ENV_VARIABLE_NAME_HERE>
+          - from: ConsumerKey
+            to: <YOUR_ENV_VARIABLE_NAME_HERE>
+          - from: ConsumerSecret
+            to: <YOUR_ENV_VARIABLE_NAME_HERE>
+          - from: TokenURL
+            to: <YOUR_ENV_VARIABLE_NAME_HERE>
