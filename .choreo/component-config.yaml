@@ -21,10 +21,10 @@ spec:
       connectionConfig: 01ef11dc-a6c2-13f0-b2f5-fbfcbcf89088
       env:
       - from: ServiceURL
-        to: <YOUR_ENV_VARIABLE_NAME_HERE>
+        to: SERVICE_URL
       - from: ConsumerKey
-        to: <YOUR_ENV_VARIABLE_NAME_HERE>
+        to: CLIENT_ID
       - from: ConsumerSecret
-        to: <YOUR_ENV_VARIABLE_NAME_HERE>
+        to: CLIENT_SECRET
       - from: TokenURL
-        to: <YOUR_ENV_VARIABLE_NAME_HERE>
+        to: TOKEN_URL
