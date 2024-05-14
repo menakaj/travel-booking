@@ -18,7 +18,7 @@ spec:
   outbound:
     serviceReferences:
       - name: choreo:///apifirst/test514/ufgatw/ad088/v1/PUBLIC
-        connectionConfig: 01ef11d9-aaa0-1920-a98a-41751d83a4c5
+        connectionConfig: 01ef11da-6feb-129e-9cd3-7a91141cbabd
         env:
           - from: ServiceURL
             to: <YOUR_ENV_VARIABLE_NAME_HERE>
