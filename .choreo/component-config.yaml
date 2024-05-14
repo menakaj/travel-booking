@@ -17,15 +17,16 @@ spec:
       schemaFilePath: openapi.json
   outbound:
     serviceReferences:
-    - name: choreo:///apifirst/releaseresting/jmteek/ad088/v1/PUBLIC
-      connectionConfig: 01ef0b94-b024-129e-8a92-88215d144ca3
+    - name: choreo:///apifirst/test514/ufgatw/ad088/v1/PUBLIC
+      connectionConfig: 01ef11d5-96f3-12ce-a26b-c24d3efc5df5
       env:
       - from: ServiceURL
-        to: SERVICE_URL
+        to: <YOUR_ENV_VARIABLE_NAME_HERE>
       - from: ConsumerKey
-        to: CLIENT_ID
+        to: <YOUR_ENV_VARIABLE_NAME_HERE>
       - from: ConsumerSecret
-        to: CLIENT_SECRET
+        to: <YOUR_ENV_VARIABLE_NAME_HERE>
       - from: TokenURL
-        to: TOKEN_URL
+        to: <YOUR_ENV_VARIABLE_NAME_HERE>
+
 
