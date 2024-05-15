@@ -6,8 +6,11 @@ metadata:
   annotations:
     componentType: Service
 spec:
+  # +optional Build instructions for the component.
   build:
+    # +required Name of the branch. This is used to identify the corresponding deployment track.
     branch: main
+  # +optional Incoming connection details for the component (AKA Endpoints).
   inbound:
     - name: EmployeeTravelBookingAPI
       port: 8081
@@ -17,14 +20,14 @@ spec:
       schemaFilePath: openapi.json
   outbound:
     serviceReferences:
-    - name: choreo:///apifirst/test514/ufgatw/ad088/v1/PUBLIC
-      connectionConfig: 01ef11dc-a6c2-13f0-b2f5-fbfcbcf89088
-      env:
-      - from: ServiceURL
-        to: SERVICE_URL
-      - from: ConsumerKey
-        to: CLIENT_ID
-      - from: ConsumerSecret
-        to: CLIENT_SECRET
-      - from: TokenURL
-        to: TOKEN_URL
+      - name: choreo:///ramith2023/qjxv/pgbwjs/5c69c/1.0.0/PUBLIC
+        connectionConfig: 01eec9ee-3560-1cde-99a0-a47db3378cd6
+        env:
+        - from: ServiceURL
+          to: SERVICE_URL
+        - from: ConsumerKey
+          to: CLIENT_ID
+        - from: ConsumerSecret
+          to: CLIENT_SECRET
+        - from: TokenURL
+          to: TOKEN_URL
