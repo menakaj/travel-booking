@@ -24,16 +24,16 @@ spec:
       networkVisibility: Project
       context: /test/v1
       schemaFilePath: openapi.json  
-  #outbound:
-    #serviceReferences:
-      #- name: choreo:///apifirst/test514/ufgatw/ad088/v1/PUBLIC
-      #  connectionConfig: 01ef1274-77f7-1a78-8496-7ef4c226d5f0
-      #  env:
-      #  - from: ServiceURL
-      #    to: SERVICE_URL
-      #  - from: ConsumerKey
-      #    to: CLIENT_ID
-      #  - from: ConsumerSecret
-      #    to: CLIENT_SECRET
-      #  - from: TokenURL
-      #    to: TOKEN_URL
+  outbound:
+    serviceReferences:
+      - name: choreo:///apifirst/test612/hr-employee-6-12/ad088/v1/PUBLIC
+        connectionConfig: 01ef2889-07e7-13c6-979b-1da0daf0981c
+        env:
+        - from: ServiceURL
+          to: SERVICE_URL
+        - from: ConsumerKey
+          to: CLIENT_ID
+        - from: ConsumerSecret
+          to: CLIENT_SECRET
+        - from: TokenURL
+          to: TOKEN_URL
