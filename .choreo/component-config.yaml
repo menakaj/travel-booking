@@ -17,17 +17,23 @@ spec:
       type: REST
       networkVisibility: Public
       context: /travelmgt/v1
-      schemaFilePath: openapi.json 
-  outbound:
-    serviceReferences:
-      - name: choreo:///apifirst/test612/hr-employee-6-12/ad088/v1/PUBLIC
-        connectionConfig: 01ef288b-eb98-1cee-8e6b-5861acba0b2b
-        env:
-        - from: ServiceURL
-          to: SERVICE_URL
-        - from: ConsumerKey
-          to: CLIENT_ID
-        - from: ConsumerSecret
-          to: CLIENT_SECRET
-        - from: TokenURL
-          to: TOKEN_URL
+      schemaFilePath: openapi.json
+    - name: SecondEndpoint
+      port: 8080
+      type: REST
+      networkVisibility: Public
+      context: /travelmgt/v1
+      schemaFilePath: openapi.json
+  #outbound:
+    #serviceReferences:
+      #- name: choreo:///apifirst/test612/hr-employee-6-12/ad088/v1/PUBLIC
+        #connectionConfig: 01ef288b-eb98-1cee-8e6b-5861acba0b2b
+        #env:
+        #- from: ServiceURL
+        #  to: SERVICE_URL
+        #- from: ConsumerKey
+        #  to: CLIENT_ID
+        #- from: ConsumerSecret
+        #  to: CLIENT_SECRET
+        #- from: TokenURL
+        #  to: TOKEN_URL
