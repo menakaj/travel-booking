@@ -22,7 +22,7 @@ spec:
       port: 8080
       type: REST
       networkVisibility: Public
-      context: /travelmgt/v1
+      context: /second/v1
       schemaFilePath: openapi.json
   #outbound:
     #serviceReferences:
