@@ -26,10 +26,10 @@ import (
 func main() {
 	log.Printf("Server started")
 
-	log.Printf("ServiceUrl %s", os.GetEnv("SERVICE_URL"))
-	log.Printf("ClientId %s", os.GetEnv("CLIENT_ID"))
-	log.Printf("ClientSecret %s", os.GetEnv("CLIENT_SECRET"))
-	log.Printf("TokenUrl %s", os.GetEnv("TOKEN_URL"))
+	log.Printf("ServiceUrl %s", os.Getenv("SERVICE_URL"))
+	log.Printf("ClientId %s", os.Getenv("CLIENT_ID"))
+	log.Printf("ClientSecret %s", os.Getenv("CLIENT_SECRET"))
+	log.Printf("TokenUrl %s", os.Getenv("TOKEN_URL"))
 
 	router := sw.NewRouter()
 
