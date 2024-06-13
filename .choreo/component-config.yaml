@@ -18,6 +18,12 @@ spec:
       networkVisibility: Public
       context: /travelmgt/v1
       schemaFilePath: openapi.json
+    - name: Endpoint2
+      port: 8082
+      type: REST
+      networkVisibility: Project
+      context: /endpoint/v1
+      schemaFilePath: openapi.json
   #outbound:
     #serviceReferences:
       #- name: choreo:///apifirst/test612/hr-employee-6-12/ad088/v1/PUBLIC
