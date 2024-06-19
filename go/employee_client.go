@@ -8,14 +8,14 @@ import (
 	"os"
 )
 
-func getEmployee(empId int32) (*Employee, error) {
+func getPet(empId int32) (*Pet, error) {
 	accessToken, tokenErr := GetToken()
 
 	if tokenErr != nil {
 		return nil, tokenErr
 	}
 
-	requestUrl := fmt.Sprintf("%s/employees/%d", os.Getenv("SERVICE_URL"), empId)
+	requestUrl := fmt.Sprintf("%s/pets/%d", os.Getenv("PETSTORE_ENDPOINT_URL"), empId)
 
 	getEmp, _ := http.NewRequest("GET", requestUrl, nil)
 	getEmp.Header.Add("Authorization", "Bearer "+accessToken)
@@ -30,7 +30,7 @@ func getEmployee(empId int32) (*Employee, error) {
 		return nil, fmt.Errorf("employee not found")
 	}
 
-	emp := &Employee{}
+	emp := &Pet{}
 
 	body, _ := io.ReadAll(empResp.Body)
 

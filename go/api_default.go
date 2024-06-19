@@ -23,6 +23,12 @@ type Employee struct {
 	Address string `json:"address,omitempty"`
 }
 
+type Pet struct {
+	Id     int32  `json:"id,omitempty"`
+	Name   string `json:"name,omitempty"`
+	Status string `json:"status,omitempty"`
+}
+
 func CreateBooking(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 	request := BookingRequest{}
@@ -31,7 +37,7 @@ func CreateBooking(w http.ResponseWriter, r *http.Request) {
 
 	json.Unmarshal(req, &request)
 
-	emp, empErr := getEmployee(request.EmpId)
+	emp, empErr := getPet(request.EmpId)
 
 	if empErr != nil {
 		w.WriteHeader(http.StatusInternalServerError)
