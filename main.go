@@ -9,6 +9,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -24,12 +25,9 @@ import (
 )
 
 func main() {
-	log.Printf("Server started")
+	fmt.Printf("Server started")
 
-	log.Printf("ServiceUrl %s", os.Getenv("SERVICE_URL"))
-	log.Printf("ClientId %s", os.Getenv("CLIENT_ID"))
-	log.Printf("ClientSecret %s", os.Getenv("CLIENT_SECRET"))
-	log.Printf("TokenUrl %s", os.Getenv("TOKEN_URL"))
+	fmt.Printf("ServiceUrl %s", os.Getenv("PETSTORE_ENDPOINT_URL"))
 
 	router := sw.NewRouter()
 
