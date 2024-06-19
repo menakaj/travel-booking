@@ -12,7 +12,7 @@ func getPet(empId int32) (*Pet, error) {
 
 	fmt.Printf("EndpointUrl %s", os.Getenv("PETSTORE_ENDPOINT_URL"))
 
-	requestUrl := fmt.Sprintf("%s/pets/%d", os.Getenv("PETSTORE_ENDPOINT_URL"), empId)
+	requestUrl := fmt.Sprintf("%s/pet/%d", os.Getenv("PETSTORE_ENDPOINT_URL"), empId)
 
 	getEmp, _ := http.NewRequest("GET", requestUrl, nil)
 	getEmp.Header.Add("Content-Type", "application/json")
@@ -20,7 +20,7 @@ func getPet(empId int32) (*Pet, error) {
 	empResp, e := http.DefaultClient.Do(getEmp)
 
 	if e != nil {
-		return nil, fmt.Errorf("error while getting employee details")
+		return nil, fmt.Errorf("error while getting employee details %v", e)
 	}
 
 	if empResp.StatusCode != http.StatusOK {
