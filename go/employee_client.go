@@ -14,12 +14,15 @@ func getPet(empId int32) (*Pet, error) {
 
 	requestUrl := fmt.Sprintf("%s/pet/%d", os.Getenv("PETSTORE_ENDPOINT_URL"), empId)
 
+	fmt.Println(requestUrl)
+
 	getEmp, _ := http.NewRequest("GET", requestUrl, nil)
 	getEmp.Header.Add("Content-Type", "application/json")
 
 	empResp, e := http.DefaultClient.Do(getEmp)
 
 	if e != nil {
+		fmt.Println("error while getting employee details", e)
 		return nil, fmt.Errorf("error while getting employee details %v", e)
 	}
 
