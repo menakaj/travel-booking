@@ -20,8 +20,8 @@ spec:
       schemaFilePath: openapi.json
   outbound:
     serviceReferences:
-      - name: choreo:///apifirst/test0625/empoyee/ad088/v1/PUBLIC
-        connectionConfig: 01ef32af-9c04-1cae-912e-89f93f04c351
+      - name: choreo:///apifirst/test0717/hr-emp/ad088/v1/PUBLIC
+        connectionConfig: 01ef4426-ded9-13ee-ab11-8ba324941939
         env:
         - from: ServiceURL
           to: SERVICE_URL
