@@ -21,7 +21,7 @@ spec:
   outbound:
     serviceReferences:
       - name: choreo:///apifirst/test0718/hremp/ad088/v1/PUBLIC
-        connectionConfig: 01ef44e5-a2b8-1e36-b1e8-7374205b73ef
+        connectionConfig: 01ef44e7-c1b8-1748-af26-dda3b47b506f
         env:
         - from: ServiceURL
           to: SERVICE_URL
