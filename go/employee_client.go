@@ -12,7 +12,7 @@ func getPet(empId int32) (*Pet, error) {
 
 	fmt.Printf("EndpointUrl %s", os.Getenv("PETSTORE_ENDPOINT_URL"))
 
-	requestUrl := fmt.Sprintf("%s/pet/%d", os.Getenv("PETSTORE_ENDPOINT_URL"), empId)
+	requestUrl := fmt.Sprintf("%s/pet/findByStatus?status=available", os.Getenv("PETSTORE_ENDPOINT_URL"))
 
 	fmt.Println(requestUrl)
 
