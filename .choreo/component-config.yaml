@@ -20,8 +20,8 @@ spec:
       schemaFilePath: openapi.json
   outbound:
     serviceReferences:
-    - name: thirdparty:Petstore
-      connectionConfig: 01ef2e1d-8d38-1968-894e-b524d58ff7f4
+    - name: thirdparty:PetstoreService
+      connectionConfig: 01ef4a60-3e0b-1048-8880-63e633ebbc7d
       env: 
-      - from: ENDPOINT_URL
+      - from: ServiceURL
         to: PETSTORE_ENDPOINT_URL
