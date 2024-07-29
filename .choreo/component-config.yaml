@@ -12,7 +12,7 @@ spec:
     branch: main
   # +optional Incoming connection details for the component (AKA Endpoints).
   inbound:
-    - name: EmployeeTravelBookingAPI
+    - name: EmployeeTravelBooking
       port: 8081
       type: REST
       networkVisibility: Public
@@ -21,7 +21,7 @@ spec:
   outbound:
     serviceReferences:
       - name: choreo:///apifirst/test0729/emp2/ad088/v1/PUBLIC
-        connectionConfig: 01ef4db4-ca95-12a0-828f-44ff7773de1
+        connectionConfig: 01ef4db7-6d4e-1a80-969b-cc907a5c2a16
         env:
         - from: ServiceURL
           to: SERVICE_URL
