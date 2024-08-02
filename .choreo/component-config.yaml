@@ -20,14 +20,25 @@ spec:
       schemaFilePath: openapi.json
   outbound:
     serviceReferences:
-      - name: choreo:///apifirst/test3007/employeeservice/ad088/v1/PUBLIC
-        connectionConfig: 01ef4efc-1010-13f0-bbc6-862525b85263
-        env:
-        - from: ServiceURL
-          to: SERVICE_URL
-        - from: ConsumerKey
-          to: CLIENT_ID
-        - from: ConsumerSecret
-          to: CLIENT_SECRET
-        - from: TokenURL
-          to: TOKEN_URL
+      # - name: choreo:///apifirst/test3007/employeeservice/ad088/v1/PUBLIC
+      #   connectionConfig: 01ef4efc-1010-13f0-bbc6-862525b85263
+      #   env:
+      #   - from: ServiceURL
+      #     to: SERVICE_URL
+      #   - from: ConsumerKey
+      #     to: CLIENT_ID
+      #   - from: ConsumerSecret
+      #     to: CLIENT_SECRET
+      #   - from: TokenURL
+      #     to: TOKEN_URL
+     - name: thirdparty:HR2
+       connectionConfig: 01ef5090-67df-1af6-9400-89f800eecb50
+       env: 
+       - from: ServiceURL
+         to: SERVICE_URL
+       - from: ConsumerKey
+         to: CLIENT_ID
+       - from: ConsumerSecret
+         to: CLIENT_SECRET
+       - from: TokenURL
+         to: TOKEN_URL
