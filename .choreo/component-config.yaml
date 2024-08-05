@@ -31,8 +31,8 @@ spec:
       #     to: CLIENT_SECRET
       #   - from: TokenURL
       #     to: TOKEN_URL
-     - name: thirdparty:HR2
-       connectionConfig: 01ef5090-67df-1af6-9400-89f800eecb50
+     - name: choreo:///apifirst/test0805/hr-service/ad088/v1/PUBLIC
+       connectionConfig: 01ef5303-a598-13e0-9187-a9adc750bccb
        env: 
        - from: ServiceURL
          to: SERVICE_URL
