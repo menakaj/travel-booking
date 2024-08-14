@@ -32,7 +32,7 @@ spec:
       #   - from: TokenURL
       #     to: TOKEN_URL
      - name: choreo:///apifirst/test0806/hr-employeeservice/ad088/v1/PUBLIC
-       connectionConfig: 01ef5a01-8edb-1a0e-9a0e-d26f6cb24a24
+       connectionConfig: 01ef5a14-7295-12f0-b799-aff7587cc6f6
        env: 
        - from: ServiceURL
          to: SERVICE_URL
