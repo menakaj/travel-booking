@@ -31,8 +31,8 @@ spec:
       #     to: CLIENT_SECRET
       #   - from: TokenURL
       #     to: TOKEN_URL
-     - name: choreo:///apifirst/test0903/hr-employee/ad088/v1/PUBLIC
-       connectionConfig: 01ef6b67-f51e-193e-8966-b3dc6eb7f925
+     - name: choreo:///apifirst/test0909/employeehr/ad088/v1/PUBLIC
+       connectionConfig: 01ef6e7d-ac27-1518-af68-8f2240d46467
        env: 
        - from: ServiceURL
          to: SERVICE_URL
