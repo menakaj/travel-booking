@@ -20,8 +20,11 @@ spec:
       schemaFilePath: openapi.json
   outbound:
     serviceReferences:
-      # - name: choreo:///apifirst/test3007/employeeservice/ad088/v1/PUBLIC
-      #   connectionConfig: 01ef4efc-1010-13f0-bbc6-862525b85263
+     - name: thirdparty:PetStore
+       connectionConfig: 01ef8544-69bc-1678-b7c7-934bffd808a2
+       env: 
+       - from: ServiceURL
+         to: SERVICE_URL
       #   env:
       #   - from: ServiceURL
       #     to: SERVICE_URL
@@ -31,14 +34,14 @@ spec:
       #     to: CLIENT_SECRET
       #   - from: TokenURL
       #     to: TOKEN_URL
-     - name: choreo:///apifirst/test0913/hre/ad088/v1/PUBLIC
-       connectionConfig: 01ef852d-eee8-1520-8d84-56207b3bdd18
-       env: 
-       - from: ServiceURL
-         to: SERVICE_URL
-       - from: ConsumerKey
-         to: CLIENT_ID
-       - from: ConsumerSecret
-         to: CLIENT_SECRET
-       - from: TokenURL
-         to: TOKEN_URL
+     #- name: choreo:///apifirst/test0913/hre/ad088/v1/PUBLIC
+     #  connectionConfig: 01ef852d-eee8-1520-8d84-56207b3bdd18
+     #  env: 
+     # - from: ServiceURL
+     #    to: SERVICE_URL
+     #  - from: ConsumerKey
+     #    to: CLIENT_ID
+     #  - from: ConsumerSecret
+     #    to: CLIENT_SECRET
+     #  - from: TokenURL
+     #    to: TOKEN_URL
