@@ -27,8 +27,8 @@ endpoints:
     # The path should be relative to the docker context.
     schemaFilePath: openapi.json
 
-  dependencies:
-    connectionReferences:
-      - name: test2
-        resourceRef: service:/guub/znqqfm/v1/c95d2/PUBLIC
+dependencies:
+  connectionReferences:
+    - name: test2
+      resourceRef: service:/guub/znqqfm/v1/c95d2/PUBLIC
         
