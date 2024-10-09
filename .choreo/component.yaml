@@ -5,7 +5,7 @@ schemaVersion: 1.1
 endpoints:
   # +required Unique name for the endpoint.
   # This name will be used when generating the managed API
-  - name: EmployeeTravelBooking
+  - name: employeetravelbooking
     # +optional Display name for the endpoint.
     displayName: EmployeeTravelBooking
     # +required Service section has the user service endpoint details
