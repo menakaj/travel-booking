@@ -26,10 +26,10 @@ import (
 func main() {
 	log.Printf("Server started")
 
-	log.Printf("ServiceUrl %s", os.Getenv("SERVICE_URL"))
-	log.Printf("ClientId %s", os.Getenv("CLIENT_ID"))
-	log.Printf("ClientSecret %s", os.Getenv("CLIENT_SECRET"))
-	log.Printf("TokenUrl %s", os.Getenv("TOKEN_URL"))
+	log.Printf("ServiceUrl %s", os.Getenv("CHOREO_EMPNEW_SERVICEURL"))
+	log.Printf("ClientId %s", os.Getenv("CHOREO_EMPNEW_CLIENTID"))
+	log.Printf("ClientSecret %s", os.Getenv("CHOREO_EMPNEW_CLIENTSECRET"))
+	log.Printf("TokenUrl %s", os.Getenv("CHOREO_EMPNEW_TOKENURL"))
 
 	router := sw.NewRouter()
 

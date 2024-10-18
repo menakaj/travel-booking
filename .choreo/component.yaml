@@ -29,6 +29,6 @@ endpoints:
 
 dependencies:
   connectionReferences:
-    - name: test2
-      resourceRef: service:/guub/znqqfm/v1/c95d2/PUBLIC
+    - name: EmpNew
+      resourceRef: service:test3007/hr-emp-service/v1/ad088/PUBLIC
         
