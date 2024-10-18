@@ -16,6 +16,7 @@ func getEmployee(empId int32) (*Employee, error) {
 	}
 
 	requestUrl := fmt.Sprintf("%s/employees/%d", os.Getenv("SERVICE_URL"), empId)
+	fmt.Println("sending request to", requestUrl)
 
 	getEmp, _ := http.NewRequest("GET", requestUrl, nil)
 	getEmp.Header.Add("Authorization", "Bearer "+accessToken)
@@ -23,6 +24,7 @@ func getEmployee(empId int32) (*Employee, error) {
 	empResp, e := http.DefaultClient.Do(getEmp)
 
 	if e != nil {
+		fmt.Println(e.Error())
 		return nil, fmt.Errorf("error while getting employee details")
 	}
 

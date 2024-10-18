@@ -25,7 +25,7 @@ func GetToken() (string, error) {
 	r, e := http.NewRequest("POST", tokenUrl, bytes.NewReader([]byte("grant_type=client_credentials")))
 
 	if e != nil {
-		fmt.Println(e)
+		fmt.Println("error creating request", e)
 		return "", e
 	}
 	r.Header.Add("Authorization", header)
@@ -34,7 +34,7 @@ func GetToken() (string, error) {
 	res, err := http.DefaultClient.Do(r)
 
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("error generating token", err)
 		return "", e
 	}
 
@@ -43,7 +43,7 @@ func GetToken() (string, error) {
 	body, err := io.ReadAll(res.Body)
 
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("error reading access token", err)
 		return "", e
 	}
 
