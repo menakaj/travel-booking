@@ -30,5 +30,5 @@ endpoints:
 dependencies:
   connectionReferences:
     - name: EmpNew
-      resourceRef: service:test3007/hr-emp-service/v1/ad088/PUBLIC
+      resourceRef: service:/test3007/hr-emp-service/v1/ad088/PUBLIC
         
