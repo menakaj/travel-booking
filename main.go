@@ -30,6 +30,7 @@ func main() {
 	log.Printf("ClientId %s", os.Getenv("CHOREO_EMPNEW_CLIENTID"))
 	log.Printf("ClientSecret %s", os.Getenv("CHOREO_EMPNEW_CLIENTSECRET"))
 	log.Printf("TokenUrl %s", os.Getenv("CHOREO_EMPNEW_TOKENURL"))
+	log.Println(os.Environ())
 
 	router := sw.NewRouter()
 
