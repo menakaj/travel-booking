@@ -30,6 +30,6 @@ endpoints:
 
 dependencies:
   connectionReferences:
-    - name: emp-connection
+    - name: EMPNEW
       resourceRef: service:/mttm/emp-svc/v1/ad088/PUBLIC
         
