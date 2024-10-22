@@ -22,6 +22,7 @@ endpoints:
     # Accepted values: Project|Organization|Public(Default).
     networkVisibilities: 
       - Public
+      - Project
     # +optional Path to the schema definition file. Defaults to wild card route if not provided
     # This is only applicable to REST and WS endpoint types.
     # The path should be relative to the docker context.
@@ -29,6 +30,6 @@ endpoints:
 
 dependencies:
   connectionReferences:
-    - name: EmpNew
-      resourceRef: service:/test3007/hr-emp-service/v1/ad088/PUBLIC
+    - name: emp-svc
+      resourceRef: service:/mttm/emp-svc/v1/ad088/PUBLIC
         
