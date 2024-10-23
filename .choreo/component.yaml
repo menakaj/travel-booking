@@ -31,5 +31,5 @@ endpoints:
 dependencies:
   connectionReferences:
     - name: EMPNEW
-      resourceRef: service:/zitz/hr-service/v1/ad088/PUBLIC
+      resourceRef: service:/test1022/employee-svc2/v1/ad088/PUBLIC
         
