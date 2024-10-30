@@ -27,4 +27,9 @@ endpoints:
     # This is only applicable to REST and WS endpoint types.
     # The path should be relative to the docker context.
     schemaFilePath: openapi.json
+
+dependencies:
+  connectionReferences:
+  - name: sadasd
+    resourceRef: thirdparty:newService2/v1
         
