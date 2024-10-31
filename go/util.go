@@ -17,9 +17,9 @@ type TokenResponse struct {
 }
 
 func GetToken() (string, error) {
-	clientId := os.Getenv("CHOREO_EMP_CONSUMERKEY")
-	clientSecret := os.Getenv("CHOREO_EMP_CONSUMERSECRET")
-	tokenUrl := os.Getenv("CHOREO_EMP_TOKENURL")
+	clientId := os.Getenv("CHOREO_NEWCONN_CONSUMERKEY")
+	clientSecret := os.Getenv("CHOREO_NEWCONN_CONSUMERSECRET")
+	tokenUrl := os.Getenv("CHOREO_NEWCONN_TOKENURL")
 	fmt.Println(clientId, clientSecret, tokenUrl)
 	header := "Basic " + base64.StdEncoding.EncodeToString([]byte(clientId+":"+clientSecret))
 	r, e := http.NewRequest("POST", tokenUrl, bytes.NewReader([]byte("grant_type=client_credentials")))
