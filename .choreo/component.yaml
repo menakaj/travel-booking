@@ -30,6 +30,6 @@ endpoints:
 
 dependencies:
   connectionReferences:
-  - name: sadasd
-    resourceRef: thirdparty:newService2/v1
+  - name: EMPNEW
+      resourceRef: service:/testnewsnippet/hr-employee/v1/ad088/PUBLIC
         
