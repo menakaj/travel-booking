@@ -31,5 +31,5 @@ endpoints:
 dependencies:
   connectionReferences:
   - name: EMPNEW
-      resourceRef: service:/testnewsnippet/hr-employee/v1/ad088/PUBLIC
+    resourceRef: service:/testnewsnippet/hr-employee/v1/ad088/PUBLIC
         
