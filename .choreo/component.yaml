@@ -30,5 +30,5 @@ endpoints:
 
 dependencies:
   connectionReferences:
-  - name: EMP
-    resourceRef: service:/test1022/employee/v1/ad088/PUBLIC
+  - name: NewConn
+    resourceRef: service:/test1022/employeesvc2/v1/ad088/PUBLIC
