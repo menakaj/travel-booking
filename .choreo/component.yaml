@@ -31,4 +31,4 @@ endpoints:
 dependencies:
   connectionReferences:
   - name: NewConn
-    resourceRef: service:/subsctest/employeeservice/v1/ad088/PUBLIC
+    resourceRef: service:/testeuproject/hr-emp-x/v1/ad088/PUBLIC
