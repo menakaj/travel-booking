@@ -15,7 +15,7 @@ func getEmployee(empId int32) (*Employee, error) {
 		return nil, tokenErr
 	}
 
-	requestUrl := fmt.Sprintf("%s/employees/%d", os.Getenv("CHOREO_NEWCONN_SERVICEURL"), empId)
+	requestUrl := fmt.Sprintf("%s/employees/%d", os.Getenv("CHOREO_NEWCONN2_SERVICEURL"), empId)
 	fmt.Println("sending request to", requestUrl)
 
 	getEmp, _ := http.NewRequest("GET", requestUrl, nil)
