@@ -30,5 +30,5 @@ endpoints:
 
 dependencies:
   connectionReferences:
-  - name: NewConn
+  - name: NewConn2
     resourceRef: service:/testeuproject/hr-emp-x/v1/ad088/PUBLIC
