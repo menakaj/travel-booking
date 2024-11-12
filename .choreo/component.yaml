@@ -29,6 +29,18 @@ endpoints:
     schemaFilePath: openapi.json
 
 dependencies:
-  connectionReferences:
-  - name: NewConn2
-    resourceRef: service:/testeuproject/hr-emp-x/v1/ad088/PUBLIC
+  serviceReferences:
+    - name: choreo:///apifirst/testeuproject/hr-emp-x/ad088/v1/PUBLIC
+      connectionConfig: 01efa0ce-8e20-1dc0-b8a2-f4ee4d71d7a7
+      env:
+      - from: ServiceURL
+        to: CHOREO_NEWCONN2_SERVICEURL
+      - from: ConsumerKey
+        to: CHOREO_NEWCONN2_CONSUMERKEY
+      - from: ConsumerSecret
+        to: CHOREO_NEWCONN2_CONSUMERSECRET
+      - from: TokenURL
+        to: CHOREO_NEWCONN2_TOKENURL
+  #connectionReferences:
+ # - name: NewConn2
+  #  resourceRef: service:/testeuproject/hr-emp-x/v1/ad088/PUBLIC
