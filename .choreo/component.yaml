@@ -31,4 +31,4 @@ endpoints:
 dependencies:
   connectionReferences:
   - name: NewConn2
-    resourceRef: service:/releasetestproject/hr-emp-svc/v1/ad088/PUBLIC
+    resourceRef: service:/releasetestproject/hr-emp-xx/v1/ad088/PUBLIC
