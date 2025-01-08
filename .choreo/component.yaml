@@ -30,5 +30,5 @@ endpoints:
 
 dependencies:
   connectionReferences:
-  - name: NewConn2
+  - name: NewConn1
     resourceRef: service:/releasetestproject/employee/v1/ad088/PUBLIC
