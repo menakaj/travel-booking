@@ -7,7 +7,7 @@ endpoints:
   # This name will be used when generating the managed API
   - name: employeetravelbooking
     # +optional Display name for the endpoint.
-    displayName: EmployeeTravelBooking
+    displayName: TBooking
     # +required Service section has the user service endpoint details
     service:
       # +optional Base path of the API that gets exposed via the endpoint.
