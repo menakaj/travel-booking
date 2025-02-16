@@ -18,10 +18,3 @@ spec:
       networkVisibility: Public
       context: /travelmgt/v1
       schemaFilePath: openapi.json
-  outbound:
-    serviceReferences:
-    - name: thirdparty:PetStore
-      connectionConfig: 01ef8544-69bc-1678-b7c7-934bffd808a2
-      env:
-      - from: ServiceURL
-        to: PETSTORE_ENDPOINT_URL
