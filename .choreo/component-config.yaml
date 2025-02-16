@@ -9,7 +9,7 @@ spec:
   # +optional Build instructions for the component.
   build:
     # +required Name of the branch. This is used to identify the corresponding deployment track.
-    branch: main
+    branch: pets
   # +optional Incoming connection details for the component (AKA Endpoints).
   inbound:
     - name: EmployeeTravelBookingAPI
