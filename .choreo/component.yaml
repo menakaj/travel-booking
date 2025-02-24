@@ -27,7 +27,7 @@ endpoints:
     # This is only applicable to REST and WS endpoint types.
     # The path should be relative to the docker context.
     schemaFilePath: openapi.json
-  - name: NewEndpoint
+  - name: newendpoint
     # +optional Display name for the endpoint.
     displayName: NewEndpoint
     # +required Service section has the user service endpoint details
