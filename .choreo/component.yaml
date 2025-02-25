@@ -50,8 +50,4 @@ endpoints:
     # The path should be relative to the docker context.
     schemaFilePath: openapi.json
 
-dependencies:
-  connectionReferences:
-    - name: EMPNEW
-      resourceRef: service:/test1022/employee/v1/ad088/PUBLIC
         
