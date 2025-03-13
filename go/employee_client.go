@@ -20,7 +20,7 @@ func getEmployee(empId int32) (*Employee, error) {
 	fmt.Println("sending request to", requestUrl)
 
 	getEmp, _ := http.NewRequest("GET", requestUrl, nil)
-	req.Header.Add("Choreo-API-Key", choreoApiKey)
+	getEmp.Header.Add("Choreo-API-Key", choreoApiKey)
 
 	empResp, e := http.DefaultClient.Do(getEmp)
 
