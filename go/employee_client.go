@@ -15,7 +15,7 @@ func getEmployee(empId int32) (*Employee, error) {
 	// 	return nil, tokenErr
 	// }
 
-	choreoApiKey := os.Getenv("CHOREO_CONN2_APIKEY")
+	choreoApiKey := os.Getenv("CHOREO_CONN2_CHOREOAPIKEY")
 	requestUrl := fmt.Sprintf("%s/employees/%d", os.Getenv("CHOREO_CONN2_SERVICEURL"), empId)
 	fmt.Println("sending request to", requestUrl)
 
