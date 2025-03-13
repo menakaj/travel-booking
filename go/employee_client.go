@@ -9,17 +9,18 @@ import (
 )
 
 func getEmployee(empId int32) (*Employee, error) {
-	accessToken, tokenErr := GetToken()
+	// accessToken, tokenErr := GetToken()
 
-	if tokenErr != nil {
-		return nil, tokenErr
-	}
+	// if tokenErr != nil {
+	// 	return nil, tokenErr
+	// }
 
+	choreoApiKey := os.Getenv("CHOREO_CONN2_APIKEY")
 	requestUrl := fmt.Sprintf("%s/employees/%d", os.Getenv("CHOREO_CONN2_SERVICEURL"), empId)
 	fmt.Println("sending request to", requestUrl)
 
 	getEmp, _ := http.NewRequest("GET", requestUrl, nil)
-	getEmp.Header.Add("Authorization", "Bearer "+accessToken)
+	req.Header.Add("Choreo-API-Key", choreoApiKey)
 
 	empResp, e := http.DefaultClient.Do(getEmp)
 
