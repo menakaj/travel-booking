@@ -29,6 +29,7 @@ func getEmployee(empId int32) (*Employee, error) {
 		return nil, fmt.Errorf("error while getting employee details")
 	}
 
+	fmt.Println(empResp.StatusCode)
 	if empResp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("employee not found")
 	}
@@ -37,7 +38,7 @@ func getEmployee(empId int32) (*Employee, error) {
 
 	body, _ := io.ReadAll(empResp.Body)
 
-	fmt.Println(string(body))
+	fmt.Println("Response payload " + string(body))
 
 	json.Unmarshal(body, &emp)
 	return emp, nil
