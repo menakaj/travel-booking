@@ -1,5 +1,5 @@
 # +required The configuration file schema version
-schemaVersion: 1.1
+schemaVersion: 1.2
 
 # +optional Incoming connection details for the component
 endpoints:
@@ -32,3 +32,12 @@ dependencies:
   connectionReferences:
    - name: Conn2
      resourceRef: service:/release-0313/hremployeeservice/v1/ad088/PUBLIC
+
+configurations:
+  env:
+    - name: HR_SERVICE_URL
+      valueFrom:
+        connectionRef:
+          name: Conn2
+          key: ServiceURL
+        
