@@ -38,7 +38,7 @@ func getEmployee(empId int32) (*Employee, error) {
 
 	body, _ := io.ReadAll(empResp.Body)
 
-	fmt.Println("Response payload " + string(body))
+	fmt.Println("Response payload ", string(body))
 
 	json.Unmarshal(body, &emp)
 	return emp, nil
