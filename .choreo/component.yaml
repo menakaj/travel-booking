@@ -31,7 +31,7 @@ endpoints:
 dependencies:
   connectionReferences:
    - name: Conn2
-     resourceRef: service:/release-0313/hremployeeservice/v1/ad088/PUBLIC
+     resourceRef: service:/gh-project/hr-employee/v1/ad088/PUBLIC
 
 configurations:
   env:
