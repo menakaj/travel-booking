@@ -29,9 +29,9 @@ func getEmployee(empId int32) (*Employee, error) {
 		return nil, fmt.Errorf("error while getting employee details")
 	}
 
-	fmt.Info("response is not error")
+	fmt.Println("response is not error")
 
-	fmt.Infof("response status code %d", empResp.StatusCode)
+	fmt.Printf("response status code %d", empResp.StatusCode)
 
 	if empResp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("employee not found")
