@@ -9,11 +9,11 @@ import (
 )
 
 func getEmployee(empId int32) (*Employee, error) {
-	// accessToken, tokenErr := GetToken()
+	accessToken, tokenErr := GetToken()
 
-	// if tokenErr != nil {
-	// 	return nil, tokenErr
-	// }
+	if tokenErr != nil {
+ 		return nil, tokenErr
+	}
 
 	choreoApiKey := os.Getenv("CHOREO_CONN2_CHOREOAPIKEY")
 	requestUrl := fmt.Sprintf("%s/employees/%d", os.Getenv("CHOREO_CONN2_SERVICEURL"), empId)
