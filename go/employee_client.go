@@ -21,6 +21,7 @@ func getEmployee(empId int32) (*Employee, error) {
 
 	getEmp, _ := http.NewRequest("GET", requestUrl, nil)
 	getEmp.Header.Add("Choreo-API-Key", choreoApiKey)
+	getEmp.Header.Add("Authorization", fmt.Sprintf("Bearer %s", accessToken))
 
 	empResp, e := http.DefaultClient.Do(getEmp)
 
