@@ -30,5 +30,5 @@ endpoints:
 
 dependencies:
   connectionReferences:
-   - name: Conn2
-     resourceRef: service:/test-new-year/hr-employee/v1/ad088/PUBLIC
+  - name: Conn2
+    resourceRef: service:/release2025/hr-employee-service2/v1/ad088/PUBLIC
