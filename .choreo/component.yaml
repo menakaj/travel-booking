@@ -35,9 +35,10 @@ dependencies:
 
 configurations:
   env:
-    - name: HR_SERVICE_URL
-      valueFrom:
-        connectionRef:
-          name: Conn2
-          key: ServiceURL
+  - name: DB_USER
+    valueFrom:
+      configForm:
+        displayName: DB User
+        required: false
+        type: string
         
