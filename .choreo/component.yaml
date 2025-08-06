@@ -47,3 +47,9 @@ configurations:
         displayName: DB User
         required: false
         type: string
+  - name: RequiredFiels
+    valueFrom:
+      configForm:
+        displayName: RequiredField
+        required: true
+        type: string
