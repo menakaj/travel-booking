@@ -28,13 +28,22 @@ endpoints:
     # The path should be relative to the docker context.
     schemaFilePath: openapi.json
 
-dependencies:
-  connectionReferences:
-  - name: One
-    resourceRef: service:/appointment-management/appointment-management-se/v1/803f0/PUBLIC
-  - name: Two
-    resourceRef: service:/keda-test-eu/reading-list-rest-service/1.0.0/950ba/PUBLIC
-  - name: GenAI
-    resourceRef: thirdparty:TestOpenAI/v1
-  - name: Four
-    resourceRef: service:/keda-test-eu/reading-list-rest-service/1.0.0/950ba/PUBLIC
+# dependencies:
+#   connectionReferences:
+#   - name: One
+#     resourceRef: service:/appointment-management/appointment-management-se/v1/803f0/PUBLIC
+#   - name: Two
+#     resourceRef: service:/keda-test-eu/reading-list-rest-service/1.0.0/950ba/PUBLIC
+#   - name: GenAI
+#     resourceRef: thirdparty:TestOpenAI/v1
+#   - name: Four
+#     resourceRef: service:/keda-test-eu/reading-list-rest-service/1.0.0/950ba/PUBLIC
+
+configurations:
+  env:
+  - name: DB_USER
+    valueFrom:
+      configForm:
+        displayName: DB User
+        required: false
+        type: string
