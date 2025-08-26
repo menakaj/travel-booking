@@ -25,7 +25,7 @@ import (
 
 func main() {
 	log.Printf("Server started")
-	log.Printf("Commit 3")
+	log.Printf("Commit 2")
 	log.Printf("ServiceUrl %s", os.Getenv("HR_SERVICE_URL"))
 	log.Println("API Key %s", os.Getenv("CHOREO_CONN2_CHOREOAPIKEY"))
 	log.Println(os.Environ())
