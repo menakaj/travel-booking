@@ -28,6 +28,11 @@ endpoints:
     # The path should be relative to the docker context.
     schemaFilePath: openapi.json
 
+
+dependencies:
+    connectionReferences:
+    - name: Conn2
+      resourceRef: service:/integration-test-verifica/hr-employee-service/v1/ad088/PUBLIC
 # dependencies:
 #   connectionReferences:
 #   - name: One
@@ -39,17 +44,3 @@ endpoints:
 #   - name: Four
 #     resourceRef: service:/keda-test-eu/reading-list-rest-service/1.0.0/950ba/PUBLIC
 
-configurations:
-  env:
-  - name: DB_USER
-    valueFrom:
-      configForm:
-        displayName: DB User
-        required: false
-        type: string
-  - name: RequiredFiels
-    valueFrom:
-      configForm:
-        displayName: RequiredField
-        required: true
-        type: string
