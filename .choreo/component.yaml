@@ -1,5 +1,5 @@
 # +required The configuration file schema version
-schemaVersion: 1.1
+schemaVersion: 1.2
 
 # +optional Incoming connection details for the component
 endpoints:
@@ -28,7 +28,7 @@ endpoints:
     # The path should be relative to the docker context.
     schemaFilePath: openapi.json
 
-# dependencies:
-#     connectionReferences:
-#     - name: Conn2
-#       resourceRef: service:/release-mgt-test-project/hremp2/v1/ad088/PUBLIC
+dependencies:
+    connectionReferences:
+    - name: Conn2
+      resourceRef: service:/release-mgt-test-project/hremp2/v1/ad088/PUBLIC
