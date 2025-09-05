@@ -31,4 +31,4 @@ endpoints:
 dependencies:
     connectionReferences:
     - name: Conn2
-      resourceRef: service:/integration-test-verifica/hr-employee-service/v1/ad088/PUBLIC
+      resourceRef: service:/release-mgt-test-project/hremp2/v1/ad088/PUBLIC
