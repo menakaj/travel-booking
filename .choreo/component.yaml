@@ -31,7 +31,7 @@ endpoints:
 dependencies:
     connectionReferences:
     - name: Conn2
-      resourceRef: service:/release-mgt-test-project/hremp2/v1/ad088/PUBLIC
+      resourceRef: service:/release2025/hremp/v1/ad088/PUBLIC
       
 configurations:
   # +optional List of environment variables to be injected into the component.
