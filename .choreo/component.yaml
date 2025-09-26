@@ -29,18 +29,44 @@ endpoints:
     schemaFilePath: openapi.json
 
 
-dependencies:
-    connectionReferences:
-    - name: Conn2
-      resourceRef: service:/release-mgt-test-project/hremp2/v1/ad088/PUBLIC
-# dependencies:
-#   connectionReferences:
-#   - name: One
-#     resourceRef: service:/appointment-management/appointment-management-se/v1/803f0/PUBLIC
-#   - name: Two
-#     resourceRef: service:/keda-test-eu/reading-list-rest-service/1.0.0/950ba/PUBLIC
-#   - name: GenAI
-#     resourceRef: thirdparty:TestOpenAI/v1
-#   - name: Four
-#     resourceRef: service:/keda-test-eu/reading-list-rest-service/1.0.0/950ba/PUBLIC
-
+# +optional Defines runtime configurations
+configurations:
+  # +optional List of environment variables to be injected into the component.
+  env:
+    - name: DB_USER
+      # +required value source
+      # Allowed value sources: connectionRef, configForm
+      valueFrom:
+        # +required config form value source
+        configForm:
+            # +optional display name inside the config form, name will be shown in config form if not specified
+            displayName: DB User
+            # +optional default value is true if not specified
+            required: false
+            # +optional default value is string if not specified
+            # Allowed types - string, number, boolean, secret
+            type: string
+  # +optional List of files to be injected into the component from config form
+  file:
+    # +required name of the file
+    - name: application.yaml
+      # +required path to mount the file at
+      mountPath: /src/resources
+      # +required file type
+      # Supported types - yaml, json and toml
+      type: yaml
+      # +required define keys of the file
+      values:
+        # keys of the file
+        # +required at least one key
+        - name: version
+          # +required value source
+          # Allowed value sources: connectionRef, configForm
+          valueFrom:
+            # +required config form value source
+            configForm:
+              # +optional display name inside the config form, name will be shown in config form if not specified
+              displayName: Version
+              # +optional default value is string if not specified
+              # Allowed types - string, number, boolean, secret, object, array
+              type: number
