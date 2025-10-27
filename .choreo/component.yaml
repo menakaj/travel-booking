@@ -28,22 +28,22 @@ endpoints:
     # The path should be relative to the docker context.
     schemaFilePath: openapi.json
 
-dependencies:
-    connectionReferences:
-    - name: Conn2
-      resourceRef: service:/release2025/hr-emp2/v1/ad088/PUBLIC
+# dependencies:
+#     connectionReferences:
+#     - name: Conn2
+#       resourceRef: service:/release2025/hr-emp2/v1/ad088/PUBLIC
       
-configurations:
-  # +optional List of environment variables to be injected into the component.
-  env:
-    # +required Name of the environment variable
-    - name: HR_SERVICE_URL
-      # +required value source
-      # Allowed value sources: connectionRef, configForm
-      valueFrom:
-        # +required Choreo connection value source
-        connectionRef:
-          # +required Choreo connection name to refer the value from
-          name: Conn2
-          # +required Choreo connection configuration key to refer the value from
-          key: ServiceURL
+# configurations:
+#   # +optional List of environment variables to be injected into the component.
+#   env:
+#     # +required Name of the environment variable
+#     - name: HR_SERVICE_URL
+#       # +required value source
+#       # Allowed value sources: connectionRef, configForm
+#       valueFrom:
+#         # +required Choreo connection value source
+#         connectionRef:
+#           # +required Choreo connection name to refer the value from
+#           name: Conn2
+#           # +required Choreo connection configuration key to refer the value from
+#           key: ServiceURL
